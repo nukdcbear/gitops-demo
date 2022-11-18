@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpserver-app
-  namespace: httpserver-app
+  name: httpserver-app-b
+  namespace: httpserver-service-b
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: httpserver
+      app: httpserver-b
   template:
     metadata:
       labels:
-        app: httpserver
+        app: httpserver-b
     spec:
       containers:
-        - name: httpserver
+        - name: httpserver-b
           image: dcbarringer/myhttpserver:0.2.0
           ports:
             - name: tcp
