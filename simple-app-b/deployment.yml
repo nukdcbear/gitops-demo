@@ -4,7 +4,7 @@ metadata:
   name: httpserver-app-b
   namespace: httpserver-service-b
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: httpserver-b
